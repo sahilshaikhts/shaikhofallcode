@@ -2,24 +2,24 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="./Assets/CSS/style.css" />
-    <script src="./Assets/scripts/gradient.js"></script>
-    <script src="./Assets/scripts/content-filter.js"></script>
+    <link rel="stylesheet" href="././Assets/CSS/style.css" />
+    <script src="././Assets/scripts/gradient.js"></script>
+    <script src="././Assets/scripts/content-filter.js"></script>
+    <script src="././Assets/scripts/script.js"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <meta charset="UTF-8" />
 </head>
 
 <body>
-    <header></header>
     <main>
         <section id="banner-section" class="page-section">
             <div class="container">
                 <div class="row row-100">
                     <h1>Sahil Shaikh</h1>
 
-                    <div class="icons">
-                        <h2>&ltWeb/&gt</h2>
-                        <div><img /></div>
+                    <div style="display: flex; align-items: center;justify-content: space-between;">
+                        <h2>&ltWeb/&gt</h2> game
+                        <h3 style="margin-left: 1rem;"> developer</h3>
 
                     </div>
                 </div>
@@ -38,7 +38,7 @@
 
         <section id="project-section" class="page-section">
             <div class="container">
-                <div class="row row-30">
+                <div class="row row-20">
                     <div class="filter-category-container">
                         <h2>My work</h2>
                         <ul id="filter-category">
@@ -55,88 +55,213 @@
                     </div>
 
                 </div>
+
                 <div class="project-list row row-70">
 
-                    <div class="project-list-container">
+                    <div class="project-grid-container">
+
                         <div class="project-container" data-category="game">
-                            <div class="project-media"></div>
-                            <div class="project-details">
-                                <div>
-                                    <h2>Journey</h2>
+
+                            <div class="project-details-top">
+                                <h2>Journey</h2>
+                                <p>Procedural generation | Unity</p>
+                                <div class="project-links"><a
+                                        href="https://play.google.com/store/apps/details?id=ca.BatataGames.Journey"
+                                        target="_blank" rel="noopener noreferrer">Playstore</a> |
+                                    <a href="https://github.com/sahilshaikhts/Journey" target="_blank"
+                                        rel="noopener noreferrer">GitHub</a>
                                 </div>
-                                <div>
-                                    <p>Hyper casual game</p>
+                            </div>
+                            <div class="project-media"><video autoplay muted loop>
+                                    <source src="./Assets\Video\showcase_journey.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="project-details-bottom">
+                                <a onclick="OnExpandProjectDetails(event)">More info...</a>
+                                <div class="details-content">
+                                    <p>Journey is a casual Android game I developed to practice coding procedural mesh
+                                        generation.</p>
+                                    <p>In this project I implemented a procedurally generated pipe that follows a
+                                        bezier curve that was coded from scratch.</p>
+                                    <p>To optimize performance, I implemented periodic cropping of the mesh from behind
+                                        and ensured it remained centered, mitigating any potential floating-point
+                                        inaccuracies.</p>
+                                    <p>Adding an engaging touch to the menu's background, I incorporated a mesmerizing
+                                        effect of swimming fish , achieved through the use of the
+                                        boids algorithm.</p>
                                 </div>
-                                <div>Playstore</div>
                             </div>
                         </div>
 
-                        <div class="project-container offset-container" data-category="game">
-                            <div class="project-media"></div>
-                            <div class="project-details">
-                                <div>
-                                    <h2>Kick some bass</h2>
-                                </div>
-                                <div>
-                                    <p>Fight game</p>
-                                </div>
-                                <div>Playstore</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-list-container">
                         <div class="project-container" data-category="game">
-                            <div class="project-media"></div>
-                            <div class="project-details">
-                                <div>
-                                    <h2>Just do it</h2>
+
+                            <div class="project-details-top">
+                                <h2>Kick Some Bass</h2>
+                                <p>Fighting game | Unity</p>
+                                <div class="project-links"><a href="https://github.com/sahilshaikhts/KickSomeBass"
+                                        target="_blank" rel="noopener noreferrer">GitHub</a>
                                 </div>
-                                <div>
-                                    <p>Task management site</p>
+                            </div>
+                            <div class="project-media"><video autoplay muted loop>
+                                    <source src="./Assets\Video\showcase_kicksomebass.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="project-details-bottom">
+                                <a onclick="OnExpandProjectDetails(event)">More info...</a>
+                                <div class="details-content">
+
+                                    <p>KickSomeBass is a fighting game where you fight against mutant fish to free the
+                                        island.</p>
+                                    <p>In this game, I worked on 3Cs, fight abilities, input system, custom cinematic
+                                        camera and supporting systems for gameplay.</p>
+                                    <p> I experimented with a few types of cameras for fighting. I made an auto-framing
+                                        camera but ended up using a third-person mouse-controlled camera because of time
+                                        constraints and feedback.</p>
+
                                 </div>
-                                <div>Playstore</div>
                             </div>
                         </div>
-
-                        <div class="project-container offset-container" data-category="web">
-                            <div class="project-media"></div>
-                            <div class="project-details">
-                                <div>
-                                    <h2>Kick some bass</h2>
-                                </div>
-                                <div>
-                                    <p>Fight game</p>
-                                </div>
-                                <div>Playstore</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-list-container">
                         <div class="project-container" data-category="web">
-                            <div class="project-media"></div>
-                            <div class="project-details">
-                                <div>
-                                    <h2>Journey</h2>
+
+                            <div class="project-details-top">
+                                <h2>Cafe italia </h2>
+                                <p>Custom woocommerce theme | PHP </p>
+                                <div class="project-links">
+                                    <a href="https://cafe-italia.shaikhofallcode.com/" target="_blank"
+                                        rel="noopener noreferrer">Site</a>
                                 </div>
-                                <div>
-                                    <p>Hyper casual game</p>
+                            </div>
+                            <div class="project-media"><img src="./Assets\Images\showcase_cafe_italia.png" alt="">
+                            </div>
+                            <div class="project-details-bottom">
+                                <a onclick="OnExpandProjectDetails(event)">More info...</a>
+                                <div class="details-content">
+                                    <p>This site was made to work with wordpress ecommerce platform.</p>
+                                    <p>I made this site as part of my intership at Atyantik ,its a custom theme with
+                                        dynamic content that can be modified by client through dashboard. </p>
                                 </div>
-                                <div>Playstore</div>
                             </div>
                         </div>
 
-                        <div class="project-container offset-container" data-category="web">
-                            <div class="project-media"></div>
-                            <div class="project-details">
-                                <div>
-                                    <h2>Kick some bass</h2>
+                        <div class="project-container" data-category="web">
+
+                            <div class="project-details-top">
+                                <h2>Jus do it </h2>
+                                <p>Collaborative task management website | MERN </p>
+                                <div class="project-links">
+                                    <a href="https://jusdoit.net/" target="_blank" rel="noopener noreferrer">Site</a>
                                 </div>
-                                <div>
-                                    <p>Fight game</p>
+                            </div>
+                            <div class="project-media"><img src="./Assets\Images\showcase_jusdoit.png" alt="">
+                            </div>
+                            <div class="project-details-bottom">
+                                <a onclick="OnExpandProjectDetails(event)">More info...</a>
+                                <div class="details-content">
+                                    <p>This is a task management website made using the MERN stack.</p>
+                                    <p>This website allows you to create project space and add members to it with
+                                        individual roles and restriction.</p>
                                 </div>
-                                <div>Playstore</div>
+                            </div>
+                        </div>
+
+                        <div class="project-container" data-category="game">
+
+                            <div class="project-details-top">
+                                <h2>Chaos</h2>
+                                <p>Survival shooter game with AI (WIP) | Unity</p>
+                                <div class="project-links"><a href="https://github.com/sahilshaikhts/TPSShooter"
+                                        target="_blank" rel="noopener noreferrer">GitHub</a>
+                                </div>
+                            </div>
+                            <div class="project-media"><video autoplay muted loop>
+                                    <source src="./Assets\Video\showcase_shooter.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="project-details-bottom">
+                                <a onclick="OnExpandProjectDetails(event)">More info...</a>
+                                <div class="details-content">
+
+                                    <p>Chaos is a survival shooter game in an early stage, in this game you fight
+                                        against alien creatures and after every wave difficulty increases.</p>
+                                    <p>I am using behavior tree for AI, the enemies are going to be thinking
+                                        strategically and will also be controlled by Director's AI which will be
+                                        implemented in the future.</p>
+                                    <p> And I used the A* algorithm for pathfinding and also using a custom event
+                                        system for making code dependency free and reusable.</p>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-container" data-category="game">
+
+                            <div class="project-details-top">
+                                <h2>3D Game engine</h2>
+                                <p>OpenGL</p>
+                                <div class="project-links">
+                                </div>
+                            </div>
+                            <div class="project-media"><video autoplay muted loop>
+                                    <source src="./Assets\Video\showcase_engine.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="project-details-bottom">
+                                <a onclick="OnExpandProjectDetails(event)">More info...</a>
+                                <div class="details-content">
+
+                                    <p>This is a custom game engine that me and the entire class worked on with our
+                                        professor. The game engine built around ECS , event driven and uses ImGUI for
+                                        UI.</p>
+                                    <p>In this project I was responsible for coding transform component,point light and
+                                        spot light.</p>
+                                    <p> I also added support for normal maps and implemented engine layout setting and
+                                        saving using ImGUI library. </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-container" data-category="game">
+
+                            <div class="project-details-top">
+                                <h2>Bomb fuss </h2>
+                                <p>Online multiplayer game | Unity</p>
+                                <div class="project-links">
+                                </div>
+                            </div>
+                            <div class="project-media"><video autoplay muted loop>
+                                    <source src="./Assets/Video/showcase_bombfuss.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="project-details-bottom">
+                                <a onclick="OnExpandProjectDetails(event)">More info...</a>
+                                <div class="details-content">
+                                    <p>Bomb fuss is an online multiplayer game where if you have the bomb you need to
+                                        throw it to someone else before the music stops and the bomb explodes.</p>
+                                    <p>This was a solo project for school where I won the best final year project award.
+                                        In this game I used unity with photonengine for implementing networking.</p>
+                                    <p> I also implemented shop to buy power-ups during the match. </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-container" data-category="web">
+
+                            <div class="project-details-top">
+                                <h2>Centretown barbershop </h2>
+                                <p>Freelance project</p>
+                                <div class="project-links">
+                                    <a href="https://centretownbarber.com/" target="_blank"
+                                        rel="noopener noreferrer">Site</a>
+                                </div>
+                            </div>
+                            <div class="project-media"><img src="./Assets\Images\showcase_barbershop.png" alt="">
+                            </div>
+                            <div class="project-details-bottom">
+                                <a onclick="OnExpandProjectDetails(event)">More info...</a>
+                                <div class="details-content">
+                                    <p>I helped a local business by providing a website with SEO that helped them
+                                        showcase their work and attract potential clients.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -144,8 +269,57 @@
             </div>
         </section>
 
-        <section id="banner-section" class="page-section">
+        <section id="about-section" class="page-section">
+            <div class="container">
+                <div class="row row-100">
+                    <div class="aboutMe">
+                        <h1>About me</h1>
+                        <p>
+                            Programming and game development have been my passions since my early years. I discovered
+                            the world of game engines during middle school, sparking a journey of self-learning through
+                            online resources.
+                        </p>
 
+                        <p>
+                            Originally from India, I pursued a software engineering course to deepen my
+                            understanding of computers before moving to Ottawa to study game development at Algonquin
+                        </p>
+                        <p>
+                            College.
+                            Over the years, I've immersed myself in various projects, collaborating with online
+                            communitiesand participating in group endeavors. During my college years, I organized
+                            competitions and contributed to group projects, enriching my experience and broadening my
+                            skills.
+                        </p>
+                        <p>
+                            In addition to my technical pursuits, I've gained valuable real-world experience managing a
+                            restaurant kitchen, learning the intricacies of teamwork and leadership.
+                        </p>
+
+                    </div>
+                    <div class="aboutMe_experience">
+                        <h2>Technologies </h2>
+                        <div class="exper_icons">
+                            <img src="./Assets\Images\icon_unity.webp" alt="">
+                            <img src="./Assets\Images\icon_unreal.png" alt="">
+                            <img src="./Assets\Images\icon_mern.png" alt="">
+                        </div>
+                    </div>
+                    <div class="aboutMe_experience">
+                        <h2>Languages </h2>
+                        <div class="exper_icons">
+                            <img src="./Assets\Images\icon_cpp.PNG" alt="">
+                            <img src="./Assets\Images\icon_csharp.png" alt="">
+                            <img src="./Assets\Images\icon_js.png" alt="">
+                            <img src="./Assets\Images\icon_html.png" alt="">
+                            <img src="./Assets\Images\icon_css.png" alt="">
+                            <img src="./Assets\Images\icon_php.png" alt="">
+                            <img src="./Assets\Images\icon_sql.png" alt="">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </section>
     </main>
     <footer></footer>

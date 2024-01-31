@@ -8,6 +8,8 @@ window.addEventListener("load", function () {
     FilterContent("project-container", "data-category", "web");
   } else if (category === "game") {
     FilterContent("project-container", "data-category", "game");
+  } else {
+    FilterContent("project-container", "data-category", "all");
   }
 });
 
@@ -50,15 +52,20 @@ function OnClickFilterOption(aOption, aClickedButton) {
 function FilterContent(aClassName, aDataAttribute, aSelectedType = "all") {
   const content = document.getElementsByClassName(aClassName);
   if (content) {
+    var visibleElementCounter = 0;
     for (let i = 0; i < content.length; i++) {
       const element = content[i];
       const type = element.getAttribute(aDataAttribute);
 
-      console.log(type, aSelectedType);
       if (type === aSelectedType || aSelectedType === "all") {
-        element.style.display = "block";
+        visibleElementCounter++;
+        element.style.display = "flex";
+        if (visibleElementCounter % 2 == 0) {
+          element.classList.add("project-container_wOffset");
+        }
       } else {
         element.style.display = "none"; //Hide the element if not the selected type.
+        element.classList.remove("project-container_wOffset");
       }
     }
   }
