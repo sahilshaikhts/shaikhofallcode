@@ -2,7 +2,7 @@ window.addEventListener("load", function () {
   //Get url params
   const urlParams = new URL(document.location).searchParams;
   const category = urlParams.get("type");
-
+  console.log(category);
   //Based on param value filter content
   if (category === "web") {
     FilterContent("project-container", "data-category", "web");

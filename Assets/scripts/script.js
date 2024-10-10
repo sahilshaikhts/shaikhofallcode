@@ -1,5 +1,10 @@
 window.addEventListener("load", function () {
   const currentUrl = window.location.href;
+
+  //Explore button click handle
+  this.document.getElementById("btn_explore-work").onclick = function () {
+    window.location.href = "/#project-section";
+  };
 });
 
 function OnExpandProjectDetails(event) {
